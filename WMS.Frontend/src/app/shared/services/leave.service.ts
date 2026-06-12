@@ -1,10 +1,11 @@
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CreateLeaveDto, Leave, UpdateLeaveDto } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class LeaveService {
-  private base = 'http://localhost:5176/api/leave';
+  private base = '${environment.apiUrl}/leave';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Leave[]>(this.base); }
   getById(id: number) { return this.http.get<Leave>(`${this.base}/${id}`); }
@@ -16,3 +17,5 @@ export class LeaveService {
   cancel(id: number) { return this.http.put(`${this.base}/${id}/cancel`, {}); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+

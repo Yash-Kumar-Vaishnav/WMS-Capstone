@@ -1,3 +1,4 @@
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Attendance, CreateAttendanceDto } from '../models/models';
@@ -7,7 +8,7 @@ export interface CheckOutDto { checkOut: string; }
 
 @Injectable({ providedIn: 'root' })
 export class AttendanceService {
-  private base = 'http://localhost:5176/api/attendance';
+  private base = '${environment.apiUrl}/attendance';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Attendance[]>(this.base); }
   getById(id: number) { return this.http.get<Attendance>(`${this.base}/${id}`); }
@@ -24,3 +25,5 @@ export class AttendanceService {
   update(dto: any) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+

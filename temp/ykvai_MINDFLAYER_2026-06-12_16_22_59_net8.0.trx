@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b13c8f03-eb2f-4f58-a5a9-de8634ba94c3" name="ykvai@MINDFLAYER 2026-06-12 16:22:59" runUser="MINDFLAYER\ykvai" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-06-12T16:22:59.2021523+05:30" queuing="2026-06-12T16:22:59.2021539+05:30" start="2026-06-12T16:22:57.7550297+05:30" finish="2026-06-12T16:22:59.2673592+05:30" />
+  <TestSettings name="default" id="733bc6f2-62ca-4997-8766-e5cb61b7d261">
+    <Deployment runDeploymentRoot="ykvai_MINDFLAYER_2026-06-12_16_22_59" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="4cdf73d2-1e0e-4cda-92e2-0dd7177ba315" testId="824c69fe-2356-ad96-e96e-0532881b12db" testName="WMS.Tests.LeaveServiceTests.RejectAsync_ReturnsTrue_WhenLeaveExists" computerName="MINDFLAYER" duration="00:00:00.0024028" startTime="2026-06-12T16:22:59.1420083+05:30" endTime="2026-06-12T16:22:59.1422724+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cdf73d2-1e0e-4cda-92e2-0dd7177ba315" />
+    <UnitTestResult executionId="a6bf0f91-7582-4ada-8a03-f8499839bfb5" testId="7176917f-ff5f-62f3-f393-2daf940ef22f" testName="WMS.Tests.EmployeeServiceTests.GetAllAsync_ReturnsAllEmployees" computerName="MINDFLAYER" duration="00:00:00.0056185" startTime="2026-06-12T16:22:59.1417979+05:30" endTime="2026-06-12T16:22:59.1420676+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6bf0f91-7582-4ada-8a03-f8499839bfb5" />
+    <UnitTestResult executionId="d6cfbc0c-0464-4c1d-ad61-72a9d5541f99" testId="3c37afb8-2e72-5431-0de7-8633959d5e3a" testName="WMS.Tests.LeaveServiceTests.CancelAsync_ReturnsFalse_WhenAlreadyApproved" computerName="MINDFLAYER" duration="00:00:00.1633114" startTime="2026-06-12T16:22:58.8888926+05:30" endTime="2026-06-12T16:22:59.0668318+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6cfbc0c-0464-4c1d-ad61-72a9d5541f99" />
+    <UnitTestResult executionId="009ec4e7-c794-4017-b130-215e89194098" testId="2bd463ba-0024-7158-4f5d-b3a7e58074ae" testName="WMS.Tests.LeaveServiceTests.DeleteAsync_ReturnsFalse_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.0095426" startTime="2026-06-12T16:22:59.0935018+05:30" endTime="2026-06-12T16:22:59.0937200+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="009ec4e7-c794-4017-b130-215e89194098" />
+    <UnitTestResult executionId="de922400-b4a4-4e44-9d72-7f8fcc97c477" testId="7bcd180e-49d0-fe17-50ce-04cc1a654538" testName="WMS.Tests.EmployeeServiceTests.CreateAsync_ReturnsNewId" computerName="MINDFLAYER" duration="00:00:00.0159521" startTime="2026-06-12T16:22:59.0925909+05:30" endTime="2026-06-12T16:22:59.0931288+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de922400-b4a4-4e44-9d72-7f8fcc97c477" />
+    <UnitTestResult executionId="21f2807b-5afe-42a5-9d3b-c2ae9750c3f7" testId="c6bfe472-adf3-98c7-a9a3-ebe9df4370ec" testName="WMS.Tests.AttendanceServiceTests.CheckOutAsync_ReturnsFalse_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.0015286" startTime="2026-06-12T16:22:59.1426523+05:30" endTime="2026-06-12T16:22:59.1427264+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21f2807b-5afe-42a5-9d3b-c2ae9750c3f7" />
+    <UnitTestResult executionId="caad3105-471d-4ced-992e-a6e5ae0413a9" testId="905e677c-e9a9-48a4-76da-a50e7ae9c525" testName="WMS.Tests.LeaveServiceTests.GetAllAsync_ReturnsAllLeaves" computerName="MINDFLAYER" duration="00:00:00.0159496" startTime="2026-06-12T16:22:59.0926355+05:30" endTime="2026-06-12T16:22:59.0930802+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="caad3105-471d-4ced-992e-a6e5ae0413a9" />
+    <UnitTestResult executionId="02222a52-c843-4839-811f-9c74dce7cb46" testId="4593696c-6898-7787-9804-ce832357cc14" testName="WMS.Tests.LeaveServiceTests.CancelAsync_ReturnsTrue_WhenPending" computerName="MINDFLAYER" duration="00:00:00.0011338" startTime="2026-06-12T16:22:59.1454969+05:30" endTime="2026-06-12T16:22:59.1463825+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02222a52-c843-4839-811f-9c74dce7cb46" />
+    <UnitTestResult executionId="9f9b1858-0b57-491c-a792-649065d985bd" testId="2c283a6f-e960-a2e9-a79f-434972ba9874" testName="WMS.Tests.LeaveServiceTests.ApproveAsync_ReturnsTrue_WhenLeaveExists" computerName="MINDFLAYER" duration="00:00:00.0082930" startTime="2026-06-12T16:22:59.0939998+05:30" endTime="2026-06-12T16:22:59.1418585+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f9b1858-0b57-491c-a792-649065d985bd" />
+    <UnitTestResult executionId="b91053dc-ec39-44c4-8f4d-e1d3a59e42ec" testId="b4a58236-6b99-fdbf-9a31-185164bc6a60" testName="WMS.Tests.EmployeeServiceTests.DeleteAsync_ReturnsFalse_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.0018956" startTime="2026-06-12T16:22:59.1407638+05:30" endTime="2026-06-12T16:22:59.1416279+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b91053dc-ec39-44c4-8f4d-e1d3a59e42ec" />
+    <UnitTestResult executionId="db6ec729-e6fa-44d3-be0f-ad9b1b62825f" testId="2deff65b-b3a7-c4c3-612a-c6b4b60c6a57" testName="WMS.Tests.AttendanceServiceTests.GetByIdAsync_ReturnsNull_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.0019889" startTime="2026-06-12T16:22:59.1448911+05:30" endTime="2026-06-12T16:22:59.1466022+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db6ec729-e6fa-44d3-be0f-ad9b1b62825f" />
+    <UnitTestResult executionId="7e75c94e-f7e6-4bde-b084-4796b67c9aac" testId="79f05411-69a2-6cf8-1d87-719317aff63d" testName="WMS.Tests.EmployeeServiceTests.SearchAsync_ReturnsFilteredEmployees" computerName="MINDFLAYER" duration="00:00:00.0050789" startTime="2026-06-12T16:22:59.1422139+05:30" endTime="2026-06-12T16:22:59.1456172+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e75c94e-f7e6-4bde-b084-4796b67c9aac" />
+    <UnitTestResult executionId="9b533cf9-107e-4233-b5eb-9a4eacd2959b" testId="3701f476-5a3c-7dee-f8cd-f04c263e6d57" testName="WMS.Tests.AttendanceServiceTests.GetAllAsync_ReturnsAttendanceList" computerName="MINDFLAYER" duration="00:00:00.0092324" startTime="2026-06-12T16:22:59.1415629+05:30" endTime="2026-06-12T16:22:59.1424885+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b533cf9-107e-4233-b5eb-9a4eacd2959b" />
+    <UnitTestResult executionId="20bace26-47a9-405a-a89b-f489070cc697" testId="a1460c27-0b7c-8f41-9e2c-d6cacda94486" testName="WMS.Tests.AttendanceServiceTests.CheckOutAsync_ReturnsTrue_AndCalculatesHours" computerName="MINDFLAYER" duration="00:00:00.1686750" startTime="2026-06-12T16:22:58.8923327+05:30" endTime="2026-06-12T16:22:59.0927533+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20bace26-47a9-405a-a89b-f489070cc697" />
+    <UnitTestResult executionId="014a01b1-2f53-40c3-a343-8c2134f89bff" testId="23dcc063-f035-a220-44d3-09f3417b8860" testName="WMS.Tests.EmployeeServiceTests.GetByIdAsync_ReturnsEmployee_WhenFound" computerName="MINDFLAYER" duration="00:00:00.0109591" startTime="2026-06-12T16:22:59.0935541+05:30" endTime="2026-06-12T16:22:59.0944812+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="014a01b1-2f53-40c3-a343-8c2134f89bff" />
+    <UnitTestResult executionId="e1ee9ab6-1bdb-426b-9908-de060a40a5a8" testId="00c4a217-27ac-0139-4f91-7d81b068c70f" testName="WMS.Tests.LeaveServiceTests.UpdateAsync_ReturnsFalse_WhenLeaveNotFound" computerName="MINDFLAYER" duration="00:00:00.0029697" startTime="2026-06-12T16:22:59.1424287+05:30" endTime="2026-06-12T16:22:59.1451318+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1ee9ab6-1bdb-426b-9908-de060a40a5a8" />
+    <UnitTestResult executionId="6f9f24db-e192-4332-a31f-d6d02a33b178" testId="7f1ea6c1-2ca4-f69d-be98-2d29a35497b2" testName="WMS.Tests.AttendanceServiceTests.CheckInAsync_ReturnsId" computerName="MINDFLAYER" duration="00:00:00.0271880" startTime="2026-06-12T16:22:59.0930009+05:30" endTime="2026-06-12T16:22:59.1410020+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f9f24db-e192-4332-a31f-d6d02a33b178" />
+    <UnitTestResult executionId="aa362825-bc67-4d49-994d-bfa1c1ed2213" testId="ee7e4959-4de6-daaa-3f8a-de171fbd6b2e" testName="WMS.Tests.EmployeeServiceTests.UpdateAsync_ReturnsFalse_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.1672219" startTime="2026-06-12T16:22:58.8921175+05:30" endTime="2026-06-12T16:22:59.0822204+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa362825-bc67-4d49-994d-bfa1c1ed2213" />
+    <UnitTestResult executionId="7272a889-1254-4310-934c-92430e7455ac" testId="9a852011-429c-0e6a-923a-6b80adf72a82" testName="WMS.Tests.EmployeeServiceTests.GetByIdAsync_ReturnsNull_WhenNotFound" computerName="MINDFLAYER" duration="00:00:00.0007182" startTime="2026-06-12T16:22:59.1459949+05:30" endTime="2026-06-12T16:22:59.1461310+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7272a889-1254-4310-934c-92430e7455ac" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="WMS.Tests.AttendanceServiceTests.GetAllAsync_ReturnsAttendanceList" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="3701f476-5a3c-7dee-f8cd-f04c263e6d57">
+      <Execution id="9b533cf9-107e-4233-b5eb-9a4eacd2959b" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.AttendanceServiceTests" name="GetAllAsync_ReturnsAttendanceList" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.CancelAsync_ReturnsFalse_WhenAlreadyApproved" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="3c37afb8-2e72-5431-0de7-8633959d5e3a">
+      <Execution id="d6cfbc0c-0464-4c1d-ad61-72a9d5541f99" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="CancelAsync_ReturnsFalse_WhenAlreadyApproved" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.GetByIdAsync_ReturnsEmployee_WhenFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="23dcc063-f035-a220-44d3-09f3417b8860">
+      <Execution id="014a01b1-2f53-40c3-a343-8c2134f89bff" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="GetByIdAsync_ReturnsEmployee_WhenFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.UpdateAsync_ReturnsFalse_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="ee7e4959-4de6-daaa-3f8a-de171fbd6b2e">
+      <Execution id="aa362825-bc67-4d49-994d-bfa1c1ed2213" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="UpdateAsync_ReturnsFalse_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.AttendanceServiceTests.CheckInAsync_ReturnsId" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="7f1ea6c1-2ca4-f69d-be98-2d29a35497b2">
+      <Execution id="6f9f24db-e192-4332-a31f-d6d02a33b178" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.AttendanceServiceTests" name="CheckInAsync_ReturnsId" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.AttendanceServiceTests.CheckOutAsync_ReturnsTrue_AndCalculatesHours" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="a1460c27-0b7c-8f41-9e2c-d6cacda94486">
+      <Execution id="20bace26-47a9-405a-a89b-f489070cc697" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.AttendanceServiceTests" name="CheckOutAsync_ReturnsTrue_AndCalculatesHours" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.CancelAsync_ReturnsTrue_WhenPending" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="4593696c-6898-7787-9804-ce832357cc14">
+      <Execution id="02222a52-c843-4839-811f-9c74dce7cb46" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="CancelAsync_ReturnsTrue_WhenPending" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.GetByIdAsync_ReturnsNull_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="9a852011-429c-0e6a-923a-6b80adf72a82">
+      <Execution id="7272a889-1254-4310-934c-92430e7455ac" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="GetByIdAsync_ReturnsNull_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.SearchAsync_ReturnsFilteredEmployees" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="79f05411-69a2-6cf8-1d87-719317aff63d">
+      <Execution id="7e75c94e-f7e6-4bde-b084-4796b67c9aac" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="SearchAsync_ReturnsFilteredEmployees" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.ApproveAsync_ReturnsTrue_WhenLeaveExists" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="2c283a6f-e960-a2e9-a79f-434972ba9874">
+      <Execution id="9f9b1858-0b57-491c-a792-649065d985bd" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="ApproveAsync_ReturnsTrue_WhenLeaveExists" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.DeleteAsync_ReturnsFalse_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="2bd463ba-0024-7158-4f5d-b3a7e58074ae">
+      <Execution id="009ec4e7-c794-4017-b130-215e89194098" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="DeleteAsync_ReturnsFalse_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.GetAllAsync_ReturnsAllLeaves" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="905e677c-e9a9-48a4-76da-a50e7ae9c525">
+      <Execution id="caad3105-471d-4ced-992e-a6e5ae0413a9" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="GetAllAsync_ReturnsAllLeaves" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.UpdateAsync_ReturnsFalse_WhenLeaveNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="00c4a217-27ac-0139-4f91-7d81b068c70f">
+      <Execution id="e1ee9ab6-1bdb-426b-9908-de060a40a5a8" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="UpdateAsync_ReturnsFalse_WhenLeaveNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.LeaveServiceTests.RejectAsync_ReturnsTrue_WhenLeaveExists" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="824c69fe-2356-ad96-e96e-0532881b12db">
+      <Execution id="4cdf73d2-1e0e-4cda-92e2-0dd7177ba315" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.LeaveServiceTests" name="RejectAsync_ReturnsTrue_WhenLeaveExists" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.AttendanceServiceTests.CheckOutAsync_ReturnsFalse_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="c6bfe472-adf3-98c7-a9a3-ebe9df4370ec">
+      <Execution id="21f2807b-5afe-42a5-9d3b-c2ae9750c3f7" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.AttendanceServiceTests" name="CheckOutAsync_ReturnsFalse_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.DeleteAsync_ReturnsFalse_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="b4a58236-6b99-fdbf-9a31-185164bc6a60">
+      <Execution id="b91053dc-ec39-44c4-8f4d-e1d3a59e42ec" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="DeleteAsync_ReturnsFalse_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.GetAllAsync_ReturnsAllEmployees" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="7176917f-ff5f-62f3-f393-2daf940ef22f">
+      <Execution id="a6bf0f91-7582-4ada-8a03-f8499839bfb5" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="GetAllAsync_ReturnsAllEmployees" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.AttendanceServiceTests.GetByIdAsync_ReturnsNull_WhenNotFound" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="2deff65b-b3a7-c4c3-612a-c6b4b60c6a57">
+      <Execution id="db6ec729-e6fa-44d3-be0f-ad9b1b62825f" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.AttendanceServiceTests" name="GetByIdAsync_ReturnsNull_WhenNotFound" />
+    </UnitTest>
+    <UnitTest name="WMS.Tests.EmployeeServiceTests.CreateAsync_ReturnsNewId" storage="d:\capgemini\wms\wms-solution\wms.tests\bin\release\net8.0\wms.tests.dll" id="7bcd180e-49d0-fe17-50ce-04cc1a654538">
+      <Execution id="de922400-b4a4-4e44-9d72-7f8fcc97c477" />
+      <TestMethod codeBase="D:\Capgemini\WMS\WMS-Solution\WMS.Tests\bin\Release\net8.0\WMS.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WMS.Tests.EmployeeServiceTests" name="CreateAsync_ReturnsNewId" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="824c69fe-2356-ad96-e96e-0532881b12db" executionId="4cdf73d2-1e0e-4cda-92e2-0dd7177ba315" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7176917f-ff5f-62f3-f393-2daf940ef22f" executionId="a6bf0f91-7582-4ada-8a03-f8499839bfb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c37afb8-2e72-5431-0de7-8633959d5e3a" executionId="d6cfbc0c-0464-4c1d-ad61-72a9d5541f99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2bd463ba-0024-7158-4f5d-b3a7e58074ae" executionId="009ec4e7-c794-4017-b130-215e89194098" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bcd180e-49d0-fe17-50ce-04cc1a654538" executionId="de922400-b4a4-4e44-9d72-7f8fcc97c477" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6bfe472-adf3-98c7-a9a3-ebe9df4370ec" executionId="21f2807b-5afe-42a5-9d3b-c2ae9750c3f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="905e677c-e9a9-48a4-76da-a50e7ae9c525" executionId="caad3105-471d-4ced-992e-a6e5ae0413a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4593696c-6898-7787-9804-ce832357cc14" executionId="02222a52-c843-4839-811f-9c74dce7cb46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c283a6f-e960-a2e9-a79f-434972ba9874" executionId="9f9b1858-0b57-491c-a792-649065d985bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4a58236-6b99-fdbf-9a31-185164bc6a60" executionId="b91053dc-ec39-44c4-8f4d-e1d3a59e42ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2deff65b-b3a7-c4c3-612a-c6b4b60c6a57" executionId="db6ec729-e6fa-44d3-be0f-ad9b1b62825f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79f05411-69a2-6cf8-1d87-719317aff63d" executionId="7e75c94e-f7e6-4bde-b084-4796b67c9aac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3701f476-5a3c-7dee-f8cd-f04c263e6d57" executionId="9b533cf9-107e-4233-b5eb-9a4eacd2959b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1460c27-0b7c-8f41-9e2c-d6cacda94486" executionId="20bace26-47a9-405a-a89b-f489070cc697" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23dcc063-f035-a220-44d3-09f3417b8860" executionId="014a01b1-2f53-40c3-a343-8c2134f89bff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00c4a217-27ac-0139-4f91-7d81b068c70f" executionId="e1ee9ab6-1bdb-426b-9908-de060a40a5a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f1ea6c1-2ca4-f69d-be98-2d29a35497b2" executionId="6f9f24db-e192-4332-a31f-d6d02a33b178" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee7e4959-4de6-daaa-3f8a-de171fbd6b2e" executionId="aa362825-bc67-4d49-994d-bfa1c1ed2213" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a852011-429c-0e6a-923a-6b80adf72a82" executionId="7272a889-1254-4310-934c-92430e7455ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="19" executed="19" passed="19" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.28)&#xD;
+[xUnit.net 00:00:00.21]   Discovering: WMS.Tests&#xD;
+[xUnit.net 00:00:00.30]   Discovered:  WMS.Tests&#xD;
+[xUnit.net 00:00:00.36]   Starting:    WMS.Tests&#xD;
+[xUnit.net 00:00:00.68]   Finished:    WMS.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

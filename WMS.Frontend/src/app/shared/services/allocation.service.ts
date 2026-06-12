@@ -1,10 +1,11 @@
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EmployeeProjectAllocation, CreateAllocationDto, UpdateAllocationDto } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class AllocationService {
-  private base = 'http://localhost:5176/api/employeeprojectallocation';
+  private base = '${environment.apiUrl}/employeeprojectallocation';
 
   constructor(private http: HttpClient) {}
 
@@ -16,3 +17,5 @@ export class AllocationService {
   update(dto: UpdateAllocationDto) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+

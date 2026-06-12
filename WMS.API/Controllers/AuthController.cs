@@ -19,6 +19,21 @@ public class AuthController : ControllerBase
         _tokenService = tokenService;
     }
 
+    [HttpGet("test-db")]
+    public async Task<IActionResult> TestDb()
+    {
+        try
+        {
+            var userCount = await _context.UserLogins.CountAsync();
+            var allUsers = await _context.UserLogins.Select(u => new { u.Username, u.PasswordHash }).ToListAsync();
+            return Ok(new { Message = "Database is connected!", UserCount = userCount, Users = allUsers });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { Message = ex.Message, Inner = ex.InnerException?.Message });
+        }
+    }
+
     /// <summary>Login — returns JWT token. Default: admin / Admin@123</summary>
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto dto)

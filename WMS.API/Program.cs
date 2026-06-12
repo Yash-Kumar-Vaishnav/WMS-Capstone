@@ -8,6 +8,7 @@ using WMS.Application.Mappings;
 using WMS.Application.Services;
 using WMS.Infrastructure.Persistence;
 using WMS.Infrastructure.Repositories;
+using WMS.Domain.Entities;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -83,7 +84,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
-        policy.WithOrigins("http://localhost:4200")
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
@@ -119,6 +120,28 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+// ── Apply Database Migrations Automatically ───────────────────────────────────
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var db = services.GetRequiredService<ApplicationDbContext>();
+        db.Database.Migrate(); // This ensures Azure SQL DB gets the tables created automatically!
+        
+        // Failsafe: Ensure Admin exists (Azure sometimes skips the first seed)
+        if (!db.UserLogins.Any(u => u.Username == "admin"))
+        {
+            db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT UserLogins ON; INSERT INTO UserLogins (UserId, Username, PasswordHash, RoleId) VALUES (1, 'admin', '$2a$11$fBzVsc515Mpa25JqOKMX4uO6.cFT4Aqho9eRmtOzsaE6dIDCcQ9ay', 1); SET IDENTITY_INSERT UserLogins OFF;");
+        }
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "DATABASE CONNECTION FAILED ON STARTUP! Check your Connection String.");
+    }
+}
 
 // ── Middleware Pipeline ───────────────────────────────────────────────────────
 // ── Swagger always enabled for demo/academic submission ──────────────────────

@@ -1,3 +1,4 @@
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -16,7 +17,7 @@ export interface AuditLog {
   providedIn: 'root'
 })
 export class AuditLogService {
-  private apiUrl = 'http://localhost:5176/api/auditlog';
+  private apiUrl = '${environment.apiUrl}/auditlog';
 
   constructor(private http: HttpClient) {}
 
@@ -24,3 +25,5 @@ export class AuditLogService {
     return this.http.get<AuditLog[]>(this.apiUrl);
   }
 }
+
+

@@ -1,10 +1,11 @@
+import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CreateProjectDto, Project } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectService {
-  private base = 'http://localhost:5176/api/project';
+  private base = '${environment.apiUrl}/project';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Project[]>(this.base); }
   getById(id: number) { return this.http.get<Project>(`${this.base}/${id}`); }
@@ -12,3 +13,5 @@ export class ProjectService {
   update(dto: any) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+
