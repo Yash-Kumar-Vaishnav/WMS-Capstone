@@ -5,7 +5,7 @@ import { Client } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class ClientService {
-  private base = '${environment.apiUrl}/client';
+  private base = environment.apiUrl + '/client';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Client[]>(this.base); }
   getById(id: number) { return this.http.get<Client>(`${this.base}/${id}`); }
@@ -13,5 +13,7 @@ export class ClientService {
   update(dto: any) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+
 
 

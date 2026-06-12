@@ -6,7 +6,7 @@ import { LoginDto, LoginResponseDto } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private baseUrl = '${environment.apiUrl}/auth';
+  private baseUrl = environment.apiUrl + '/auth';
   private _user = new BehaviorSubject<LoginResponseDto | null>(this.loadUser());
 
   user$ = this._user.asObservable();
@@ -40,5 +40,7 @@ export class AuthService {
   getUsername(): string { return this._user.value?.username ?? ''; }
   getEmpId(): number | null { return this._user.value?.empId ?? null; }
 }
+
+
 
 

@@ -5,7 +5,7 @@ import { CreateDepartmentDto, Department, UpdateDepartmentDto } from '../models/
 
 @Injectable({ providedIn: 'root' })
 export class DepartmentService {
-  private base = '${environment.apiUrl}/department';
+  private base = environment.apiUrl + '/department';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Department[]>(this.base); }
   getById(id: number) { return this.http.get<Department>(`${this.base}/${id}`); }
@@ -13,5 +13,7 @@ export class DepartmentService {
   update(dto: UpdateDepartmentDto) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+
 
 

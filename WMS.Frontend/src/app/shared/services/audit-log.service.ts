@@ -17,7 +17,7 @@ export interface AuditLog {
   providedIn: 'root'
 })
 export class AuditLogService {
-  private apiUrl = '${environment.apiUrl}/auditlog';
+  private apiUrl = environment.apiUrl + '/auditlog';
 
   constructor(private http: HttpClient) {}
 
@@ -25,5 +25,7 @@ export class AuditLogService {
     return this.http.get<AuditLog[]>(this.apiUrl);
   }
 }
+
+
 
 

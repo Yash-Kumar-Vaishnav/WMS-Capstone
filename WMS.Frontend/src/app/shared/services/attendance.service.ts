@@ -8,7 +8,7 @@ export interface CheckOutDto { checkOut: string; }
 
 @Injectable({ providedIn: 'root' })
 export class AttendanceService {
-  private base = '${environment.apiUrl}/attendance';
+  private base = environment.apiUrl + '/attendance';
   constructor(private http: HttpClient) {}
   getAll() { return this.http.get<Attendance[]>(this.base); }
   getById(id: number) { return this.http.get<Attendance>(`${this.base}/${id}`); }
@@ -25,5 +25,7 @@ export class AttendanceService {
   update(dto: any) { return this.http.put(this.base, dto); }
   delete(id: number) { return this.http.delete(`${this.base}/${id}`); }
 }
+
+
 
 
