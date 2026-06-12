@@ -1,0 +1,15 @@
+.vs/
+bin/
+obj/
+node_modules/
+dist/
+publish/
+
+*.user
+*.suo
+*.cache
+
+.vscode/
+
+WMS.Frontend/node_modules/
+WMS.Frontend/dist/

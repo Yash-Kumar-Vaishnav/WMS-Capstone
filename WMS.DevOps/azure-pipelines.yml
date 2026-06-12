@@ -1,0 +1,141 @@
+# WMS Azure DevOps CI/CD Pipeline
+trigger:
+  branches:
+    include:
+      - main
+      - dev
+      - feature/*
+
+variables:
+  buildConfiguration: 'Release'
+  dotnetVersion: '8.x'
+  nodeVersion: '20.x'
+  angularAppDir: 'WMS.Frontend'
+
+stages:
+
+# ─── Stage 1: Build & Test Backend ───────────────────────────────────────────
+- stage: BuildAndTest
+  displayName: 'Build & Test (.NET)'
+  jobs:
+  - job: DotNetBuild
+    displayName: 'Restore, Build, Test .NET'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK $(dotnetVersion)'
+      inputs:
+        packageType: 'sdk'
+        version: '$(dotnetVersion)'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore NuGet packages'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+        feedsToUse: 'select'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build solution'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Run xUnit Tests'
+      inputs:
+        command: 'test'
+        projects: '**/WMS.Tests/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore --collect:"XPlat Code Coverage" --results-directory $(Agent.TempDirectory)/TestResults'
+
+    - task: PublishCodeCoverageResults@1
+      displayName: 'Publish Code Coverage'
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: '$(Agent.TempDirectory)/TestResults/**/coverage.cobertura.xml'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish API'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        projects: '**/WMS.API/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/api'
+        zipAfterPublish: true
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Upload API Artifact'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/api'
+        ArtifactName: 'WMS-API'
+
+# ─── Stage 2: Build Angular Frontend ─────────────────────────────────────────
+- stage: BuildFrontend
+  displayName: 'Build Angular Frontend'
+  dependsOn: BuildAndTest
+  jobs:
+  - job: AngularBuild
+    displayName: 'npm install + ng build'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+
+    - task: NodeTool@0
+      displayName: 'Install Node.js $(nodeVersion)'
+      inputs:
+        versionSpec: '$(nodeVersion)'
+
+    - script: |
+        cd $(angularAppDir)
+        npm ci
+      displayName: 'npm ci'
+
+    - script: |
+        cd $(angularAppDir)
+        npx ng build --configuration production
+      displayName: 'ng build --prod'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Upload Angular Artifact'
+      inputs:
+        PathtoPublish: '$(angularAppDir)/dist'
+        ArtifactName: 'WMS-Frontend'
+
+# ─── Stage 3: Deploy to Azure ────────────────────────────────────────────────
+- stage: Deploy
+  displayName: 'Deploy to Azure'
+  dependsOn: BuildFrontend
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: DeployAPI
+    displayName: 'Deploy WMS API to App Service'
+    environment: 'Production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            displayName: 'Deploy API to Azure App Service'
+            inputs:
+              azureSubscription: '<YOUR_SERVICE_CONNECTION>'
+              appType: 'webApp'
+              appName: '<YOUR_APP_SERVICE_NAME>'
+              package: '$(Pipeline.Workspace)/WMS-API/**/*.zip'
+
+  - deployment: DeployFrontend
+    displayName: 'Deploy Angular to Static Web App'
+    environment: 'Production'
+    dependsOn: DeployAPI
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureStaticWebApp@0
+            displayName: 'Deploy Angular to Static Web Apps'
+            inputs:
+              app_location: '/'
+              output_location: 'dist/wms-frontend'
+              azure_static_web_apps_api_token: '$(AZURE_STATIC_WEB_APP_TOKEN)'

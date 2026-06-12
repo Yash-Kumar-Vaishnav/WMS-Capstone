@@ -1,0 +1,46 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: Roboto, "Helvetica Neue", sans-serif; background: #f5f5f5; }
+
+.page-container { padding: 24px; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card { text-align: center; }
+.summary-card mat-card-title { font-size: 2rem; color: #3f51b5; }
+.summary-card mat-card-subtitle { font-size: 1rem; }
+
+.full-width { width: 100%; }
+
+.actions-col { display: flex; gap: 8px; }
+
+mat-toolbar { margin-bottom: 0; }
+
+.sidenav-container { height: 100vh; }
+
+.sidenav { width: 240px; }
+
+.sidenav .mat-nav-list a { display: flex; align-items: center; gap: 8px; }
+
+.main-content { padding: 24px; flex: 1; overflow-y: auto; }
+
+.spacer { flex: 1 1 auto; }
+
+.mat-column-actions { width: 120px; }
+
+table { width: 100%; }
+
+.search-field { margin-bottom: 16px; }
+
+.chip-pending { background-color: #ff9800 !important; color: white !important; }
+.chip-approved { background-color: #4caf50 !important; color: white !important; }
+.chip-rejected { background-color: #f44336 !important; color: white !important; }
+.chip-active { background-color: #4caf50 !important; color: white !important; }
+.chip-inactive { background-color: #9e9e9e !important; color: white !important; }
