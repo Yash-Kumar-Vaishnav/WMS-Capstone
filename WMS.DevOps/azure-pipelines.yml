@@ -44,18 +44,18 @@ stages:
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --no-restore'
 
-    - task: DotNetCoreCLI@2
+   - task: DotNetCoreCLI@2
       displayName: 'Run xUnit Tests'
       inputs:
         command: 'test'
         projects: '**/WMS.Tests/*.csproj'
-        arguments: '--configuration $(buildConfiguration) --no-restore --collect:"XPlat Code Coverage" --results-directory $(Agent.TempDirectory)/TestResults'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
 
-    - task: PublishCodeCoverageResults@1
-      displayName: 'Publish Code Coverage'
-      inputs:
-        codeCoverageTool: Cobertura
-        summaryFileLocation: '$(Agent.TempDirectory)/TestResults/**/coverage.cobertura.xml'
+    # - task: PublishCodeCoverageResults@1
+    #   displayName: 'Publish Code Coverage'
+    #   inputs:
+    #     codeCoverageTool: Cobertura
+    #     summaryFileLocation: '$(Agent.TempDirectory)/TestResults/**/coverage.cobertura.xml'
 
     - task: DotNetCoreCLI@2
       displayName: 'Publish API'
