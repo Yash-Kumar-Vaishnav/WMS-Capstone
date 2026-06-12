@@ -44,12 +44,16 @@ stages:
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --no-restore'
 
-   - task: DotNetCoreCLI@2
+    - script: dotnet test WMS.Tests/WMS.Tests.csproj --configuration $(buildConfiguration) --no-restore --logger trx --results-directory $(Agent.TempDirectory)/TestResults
       displayName: 'Run xUnit Tests'
+
+    - task: PublishTestResults@2
+      displayName: 'Publish Test Results'
+      condition: always()
       inputs:
-        command: 'test'
-        projects: '**/WMS.Tests/*.csproj'
-        arguments: '--configuration $(buildConfiguration) --no-restore'
+        testResultsFormat: 'VSTest'
+        testResultsFiles: '**/*.trx'
+        searchFolder: '$(Agent.TempDirectory)/TestResults'
 
     # - task: PublishCodeCoverageResults@1
     #   displayName: 'Publish Code Coverage'
